@@ -3,7 +3,7 @@ import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import connectDB from "./config/db.js";
-import userRouter from "./Routes/user.routes.js";
+import userRouter from "./routes/user.routes.js";
 
 
 const app = express();
