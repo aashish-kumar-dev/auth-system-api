@@ -1,4 +1,4 @@
-import 'dotenv/config';// alwats use this dotenv
+import 'dotenv/config';
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
