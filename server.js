@@ -16,11 +16,11 @@ app.use(cors({credentials:true}));
 
 app.get("/", (req,res)=>{
     res.send("API working properly")
-})
+});
 
 app.use("/api/user", userRouter);
 
 
 app.listen(port, ()=>{
 console.log(`Server Running on port: ${port}`);
-})
+});

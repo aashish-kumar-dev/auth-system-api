@@ -32,12 +32,7 @@ export const register = async (req, res) => {
       text: `Welcome to my website. Your account has been created with email id: ${email}`,
     };
 
-    // Email failure should not fail registration
-    try {
-      await transporter.sendMail(mailOptions);
-    } catch (emailError) {
-      console.log("Welcome email failed:", emailError.message);
-    }
+     await transporter.sendMail(mailOptions);
 
     return res.status(201).json({
       success: true,
