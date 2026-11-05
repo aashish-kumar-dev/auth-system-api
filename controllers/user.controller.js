@@ -5,12 +5,13 @@ import transporter from "../config/nodemailer.js";
 
 // Register user
 export const register = async (req, res) => {
+  try{
   const { name, email, password } = req.body;
 
   if (!name || !email || !password) {
     return res.status(400).json({ success: false, message: "Missing Details" });
   }
-  try {
+ 
     const existingUser = await User.findOne({ email });
 
     if (existingUser) {
